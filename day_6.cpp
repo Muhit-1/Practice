@@ -1,37 +1,38 @@
 //PrepareTutorials30 Days of CodeDay 6: Let's Review
 #include<bits/stdc++.h>
+#include<vector>
+
 using namespace std;
 
 int main()
 {
     int t;
     cin>>t;
+
     while(t--)
     {
-        int odd, even;
-        string s;
+        string s,f;
+        vector<char>odd,even;
         cin>>s;
-        int l = s.length();
-        for(int i=0; i<=l; i++)
+        for(int i=0; i<s.size(); i++)
         {
             if(i%2==0)
             {
-                even=i;
-                 cout<<even;
-                     cout<<s.at(even);
-                     break;
+                even.push_back(s[i]);
             }
-            else
-            {
-                odd=i;
-                //cout<<odd<<endl;
-            }
-
-            //   cout<<s;
-            // cout<<s.at(odd)<<endl;
-
+            else odd.push_back (s[i]);
         }
 
+        for (char c : even)
+        {
+            cout<<c;
+        }
+        cout<<" ";
+        for (char c : odd)
+        {
+            cout<<c;
+        }
+        cout<<endl;
     }
 
 }
